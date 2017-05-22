@@ -1,15 +1,18 @@
-	Some minimal computational proficiency is beneficial to delving into analysis of large amounts of sequence based data. Foremost is a basic understanding of the command-line and manipulating files in this manner. Some great resources to gain proficiency in this area include Software Carpentry Courses (and associated online exercises), as well as a number of books including Bioinformatics Data Skills ~ Vince Buffalo). Beyond some fundamental skillsets another valuable consideration for really any type of computational analysis is reproducibility and version control, both of which are covered well in software carpentry and bioinformatics data skills. A great way to properly document analysis and thus the contribute to reproducibility is to use Rmarkdown? And Jupyter. 
+Some minimal computational proficiency is beneficial to delving into analysis of large amounts of sequence based data. Foremost is a basic understanding of the command-line and manipulating files in this manner. Some great resources to gain proficiency in this area include Software Carpentry Courses (and associated online exercises), as well as a number of books including Bioinformatics Data Skills ~ Vince Buffalo). Beyond some fundamental skillsets another valuable consideration for really any type of computational analysis is reproducibility and version control, both of which are covered well in software carpentry and bioinformatics data skills. A great way to properly document analysis and thus the contribute to reproducibility is to use Rmarkdown? And Jupyter. 
 
 Becoming comfortable using the shell can provide benefits outside of bioinformatics. Here are some examples of the benefits provided by shell familiarity for non-bioinformatics applications:
 
 You have a spreadsheet (e.g. file.csv) with the following information in one column:
 
+```
 Example1
 Example2
 Example3
+```
 
 You want the column to look like the following:
 
+```
 Example1
 Example1
 Example1
@@ -18,7 +21,8 @@ Example2
 Example2
 Example3
 Example3
-Example3
+```
+
 
 How would one accomplish this in a spreadsheet program? A casual user might add two blank rows beneath each entry and then copy/paste the desired information into the blank rows that were just created. 
 

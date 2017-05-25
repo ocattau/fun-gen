@@ -1,4 +1,4 @@
-# 
+#Useful Software and Platforms
 
 **Raw Data Quality Control** 
 
@@ -6,7 +6,7 @@ FastQC (Andrews and Others 2010) - Quality metrics for high-throughput sequencin
  
 **Sequence Trimming** 
 
-Trimmomatic (Bolger, Lohse, and Usadel 2014) - Adapter and quality trimming
+Trimmomatic (Bolger, Lohse, and Usadel 2014) - Adapter and quality trimming    
 TrimGalore! (“Babraham Bioinformatics - Trim Galore!” 2017) (uses Cutadapt (“User Guide — Cutadapt 1.13 Documentation” 2017) - Adapter and quality trimming, extra functionality for bisulfite sequencing. 
  
 **Transcriptome Sequence Assembly**
@@ -15,30 +15,32 @@ Trinity (Grabherr et al. 2011) - De novo assembly with downstream analysis capab
  
 **Sequence Read Mapping** 
 
-Bowtie(2) (Langmead et al. 2009) - Alignment tool for high-throughput sequencing
-BWA (H. Li and Durbin 2009) - Alignment tool for high-throughput sequencing
-STAR (Dobin et al. 2013) - Alignment tool for high-throughput sequencing to a reference genome
-BSMAP (Xi and Li 2009) - Bisulfite sequencing specific alignment
-Bismark (Krueger and Andrews 2011) - Bisulfite sequencing specific alignment (uses Bowtie)
-Samtools (H. Li et al. 2009) -SAM/BAM manipulations: conversion, sorting, indexing etc.
+Bowtie(2) (Langmead et al. 2009) - Alignment tool for high-throughput sequencing     
+BWA (H. Li and Durbin 2009) - Alignment tool for high-throughput sequencing    
+STAR (Dobin et al. 2013) - Alignment tool for high-throughput sequencing to a reference genome    
+BSMAP (Xi and Li 2009) - Bisulfite sequencing specific alignment    
+Bismark (Krueger and Andrews 2011) - Bisulfite sequencing specific alignment (uses Bowtie)    
+Samtools (H. Li et al. 2009) -SAM/BAM manipulations: conversion, sorting, indexing etc.    
  
 **Differential Expression and Differential Methylation Analysis**
 
-RSEM (B. Li and Dewey 2011) - Alignment based transcript abundance estimation
-Kallisto - (Bray et al. 2016) Alignment-free transcript abundance estimation
-EdgeR (M. D. Robinson, McCarthy, and Smyth 2010) R package for differential expression analysis
-DeSeq  (Anders and Huber, n.d.) R package for differential expression analysis
-Methylkit (Akalin et al. 2012) - R package for analysis of DNA methylation profiles 
-MACAU (Lea, Tung, and Zhou 2015) - Differential methylation analysis for bisulfite sequencing data
+RSEM (B. Li and Dewey 2011) - Alignment based transcript abundance estimation    
+Kallisto - (Bray et al. 2016) Alignment-free transcript abundance estimation    
+EdgeR (M. D. Robinson, McCarthy, and Smyth 2010) R package for differential expression analysis    
+DeSeq  (Anders and Huber, n.d.) R package for differential expression analysis   
+Methylkit (Akalin et al. 2012) - R package for analysis of DNA methylation profiles    
+MACAU (Lea, Tung, and Zhou 2015) - Differential methylation analysis for bisulfite sequencing data   
  
 **Platforms for Genomic Analyses and Visualization**
 
-Galaxy (Afgan et al. 2016; Goecks et al. 2013) - Web-based platform for accessible, reproducible, and transparent analysis and visualization
-Integrated Genome Viewer (IGV) (J. T. Robinson et al. 2011; Thorvaldsdóttir, Robinson, and Mesirov 2013) - Visualization tool for interactive exploration of large, integrated genomic datasets
-CoGe (Lyons and Freeling 2008; Lyons et al. 2008) - Online system for making the retrieval and comparison of genomic information and sequence data 
+Galaxy (Afgan et al. 2016; Goecks et al. 2013) - Web-based platform for accessible, reproducible, and transparent analysis and visualization     
+Integrated Genome Viewer (IGV) (J. T. Robinson et al. 2011; Thorvaldsdóttir, Robinson, and Mesirov 2013) - Visualization tool for interactive exploration of large, integrated genomic datasets    
+CoGe (Lyons and Freeling 2008; Lyons et al. 2008) - Online system for making the retrieval and comparison of genomic information and sequence data     
 Cyverse (Merchant et al. 2016) - Cyberinfrastructure for enabling data to discovery for the life sciences
-Bedtools (Quinlan and Hall 2010) - Suite of utilities for comparing genomic features
+Bedtools (Quinlan and Hall 2010) - Suite of utilities for comparing genomic features    
 
+
+**Citations**
 ```
 Afgan, Enis, Dannon Baker, Marius van den Beek, Daniel Blankenberg, Dave Bouvier, Martin Čech, John Chilton, et al. 2016. “The Galaxy Platform for Accessible, Reproducible and Collaborative Biomedical Analyses: 2016 Update.” Nucleic Acids Research 44 (W1): W3–10.
 Akalin, Altuna, Matthias Kormaksson, Sheng Li, Francine E. Garrett-Bakelman, Maria E. Figueroa, Ari Melnick, and Christopher E. Mason. 2012. “methylKit: A Comprehensive R Package for the Analysis of Genome-Wide DNA Methylation Profiles.” Genome Biology 13 (10): R87.

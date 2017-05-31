@@ -2,20 +2,20 @@
 
 Table 1. Software and resources useful in functional genomic data analyses
  
-Raw Data Quality Control
+Raw Data Quality Control    
 FastQC (Andrews and Others 2010) - Quality metrics for high-throughput sequencing runs
  
-Sequence Trimming 
+Sequence Trimming     
 Trimmomatic (Bolger, Lohse, and Usadel 2014) - Adapter and quality trimming
 TrimGalore! - wrapper for  Cutadapt (Martin 2011) - Adapter and quality trimming, extra functionality for bisulfite sequencing. 
  
-Transcriptome Sequence Assembly and Characterization
+Transcriptome Sequence Assembly and Characterization    
 Trinity (Grabherr et al. 2011) - De novo assembly with downstream analysis capability
 Trinotate  (Haas et al. 2013) - Annotation suite designed for automatic functional annotation of transcriptomes
 Dammit! (Scott 2017) - A simple de novo transcriptome annotator
 Transrate (Smith-Unna et al. 2016) - de-novo transcriptome assembly quality analysis
- 
-Sequence Read Mapping 
+  
+Sequence Read Mapping     
 Bowtie(2) (Langmead et al. 2009) - Alignment tool for high-throughput sequencing
 BWA (H. Li and Durbin 2009) - Alignment tool for high-throughput sequencing
 STAR (Dobin et al. 2013) - Alignment tool for high-throughput sequencing to a reference genome
@@ -24,7 +24,7 @@ BSMAP (Xi and Li 2009) - Bisulfite sequencing specific alignment
 Bismark (Krueger and Andrews 2011) - Bisulfite sequencing specific alignment (uses Bowtie)
 Samtools (H. Li et al. 2009) -SAM/BAM manipulations: conversion, sorting, indexing etc.
  
-Differential Gene Expression and Differential Methylation Analysis
+Differential Gene Expression and Differential Methylation Analysis     
 RSEM (B. Li and Dewey 2011) - Alignment based transcript abundance estimation
 Kallisto - (Bray et al. 2016) Alignment-free transcript abundance estimation
 EdgeR (M. D. Robinson, McCarthy, and Smyth 2010) R package for differential expression analysis
@@ -33,7 +33,7 @@ Methylkit (Akalin et al. 2012) - R package for analysis of DNA methylation profi
 MethylExtract (Barturen et al. 2013) - Generates methylation maps and detects sequence variation
 MACAU (Lea, Tung, and Zhou 2015) - Differential methylation analysis for bisulfite sequencing data
  
-Platforms for Genomic Analyses and Visualization
+Platforms for Genomic Analyses and Visualization     
 Galaxy (Afgan et al. 2016; Goecks et al. 2013) - Web-based platform for accessible, reproducible, and transparent analysis and visualization
 Integrated Genome Viewer (IGV) (J. T. Robinson et al. 2011; Thorvaldsdóttir, Robinson, and Mesirov 2013) - Visualization tool for interactive exploration of large, integrated genomic datasets
 CoGe (Lyons and Freeling 2008; Lyons et al. 2008) - Online system for making the retrieval and comparison of genomic information and sequence data
@@ -43,7 +43,11 @@ Samtools (H. Li et al. 2009) - Suite of programs for interacting with high-throu
 Cytoscape (Shannon et al. 2003)  - Software platform for visualizing complex networks
 Revigo (Supek et al. 2011) - Web service that visually summarizes Gene Ontology terms
 SQLShare - (Howe et al. 2011) - Database-as-a-service platform designed to facilitate data sharing and collaborative analysis
- 
+
+
+
+References
+```
 Afgan, Enis, Dannon Baker, Marius van den Beek, Daniel Blankenberg, Dave Bouvier, Martin Čech, John Chilton, et al. 2016. “The Galaxy Platform for Accessible, Reproducible and Collaborative Biomedical Analyses: 2016 Update.” Nucleic Acids Research 44 (W1): W3–10.
 Akalin, Altuna, Matthias Kormaksson, Sheng Li, Francine E. Garrett-Bakelman, Maria E. Figueroa, Ari Melnick, and Christopher E. Mason. 2012. “methylKit: A Comprehensive R Package for the Analysis of Genome-Wide DNA Methylation Profiles.” Genome Biology 13 (10): R87.
 Anders, Simon, and Wolfgang Huber. 2012. “Differential Expression of RNA-Seq Data at the Gene Level - the DESeq Package.” http://bioconductor.org/packages/release/bioc/vignettes/DESeq/inst/doc/DESeq.pdf.
@@ -75,3 +79,4 @@ Smith-Unna, Richard, Chris Boursnell, Rob Patro, Julian M. Hibberd, and Steven K
 Supek, Fran, Matko Bošnjak, Nives Škunca, and Tomislav Šmuc. 2011. “REVIGO Summarizes and Visualizes Long Lists of Gene Ontology Terms.” PloS One 6 (7): e21800.
 Thorvaldsdóttir, Helga, James T. Robinson, and Jill P. Mesirov. 2013. “Integrative Genomics Viewer (IGV): High-Performance Genomics Data Visualization and Exploration.” Briefings in Bioinformatics 14 (2): 178–92.
 Xi, Yuanxin, and Wei Li. 2009. “BSMAP: Whole Genome Bisulfite Sequence MAPping Program.” BMC Bioinformatics 10 (July): 232.
+```

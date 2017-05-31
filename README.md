@@ -8,4 +8,4 @@ The primary resources include:
 - Examples of Using SQLShare (videos)
 
 
-Please use the Issues feature in the repository to ask questions and suggest updates.
+Please use the [Issues](https://github.com/sr320/fun-gen/issues) feature in the repository to ask questions and suggest updates.

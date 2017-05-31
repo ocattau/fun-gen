@@ -2,46 +2,46 @@
 
 Table 1. Software and resources useful in functional genomic data analyses
  
-Raw Data Quality Control    
+### Raw Data Quality Control    
 FastQC (Andrews and Others 2010) - Quality metrics for high-throughput sequencing runs
  
-Sequence Trimming     
-Trimmomatic (Bolger, Lohse, and Usadel 2014) - Adapter and quality trimming
-TrimGalore! - wrapper for  Cutadapt (Martin 2011) - Adapter and quality trimming, extra functionality for bisulfite sequencing. 
+### Sequence Trimming     
+Trimmomatic (Bolger, Lohse, and Usadel 2014) - Adapter and quality trimming    
+TrimGalore! - wrapper for  Cutadapt (Martin 2011) - Adapter and quality trimming, extra functionality for bisulfite sequencing.     
  
-Transcriptome Sequence Assembly and Characterization    
-Trinity (Grabherr et al. 2011) - De novo assembly with downstream analysis capability
-Trinotate  (Haas et al. 2013) - Annotation suite designed for automatic functional annotation of transcriptomes
-Dammit! (Scott 2017) - A simple de novo transcriptome annotator
-Transrate (Smith-Unna et al. 2016) - de-novo transcriptome assembly quality analysis
+### Transcriptome Sequence Assembly and Characterization    
+Trinity (Grabherr et al. 2011) - De novo assembly with downstream analysis capability    
+Trinotate  (Haas et al. 2013) - Annotation suite designed for automatic functional annotation of transcriptomes    
+Dammit! (Scott 2017) - A simple de novo transcriptome annotator    
+Transrate (Smith-Unna et al. 2016) - de-novo transcriptome assembly quality analysis    
   
-Sequence Read Mapping     
-Bowtie(2) (Langmead et al. 2009) - Alignment tool for high-throughput sequencing
-BWA (H. Li and Durbin 2009) - Alignment tool for high-throughput sequencing
-STAR (Dobin et al. 2013) - Alignment tool for high-throughput sequencing to a reference genome
-TopHat(2) (Kim et al. 2013) - Splice junction mapper for RNA-Seq reads (uses Bowtie)
-BSMAP (Xi and Li 2009) - Bisulfite sequencing specific alignment
-Bismark (Krueger and Andrews 2011) - Bisulfite sequencing specific alignment (uses Bowtie)
-Samtools (H. Li et al. 2009) -SAM/BAM manipulations: conversion, sorting, indexing etc.
+### Sequence Read Mapping     
+Bowtie(2) (Langmead et al. 2009) - Alignment tool for high-throughput sequencing    
+BWA (H. Li and Durbin 2009) - Alignment tool for high-throughput sequencing    
+STAR (Dobin et al. 2013) - Alignment tool for high-throughput sequencing to a reference genome    
+TopHat(2) (Kim et al. 2013) - Splice junction mapper for RNA-Seq reads (uses Bowtie)    
+BSMAP (Xi and Li 2009) - Bisulfite sequencing specific alignment    
+Bismark (Krueger and Andrews 2011) - Bisulfite sequencing specific alignment (uses Bowtie)    
+Samtools (H. Li et al. 2009) -SAM/BAM manipulations: conversion, sorting, indexing etc.    
  
-Differential Gene Expression and Differential Methylation Analysis     
-RSEM (B. Li and Dewey 2011) - Alignment based transcript abundance estimation
-Kallisto - (Bray et al. 2016) Alignment-free transcript abundance estimation
-EdgeR (M. D. Robinson, McCarthy, and Smyth 2010) R package for differential expression analysis
-DeSeq  (Anders and Huber 2012) R package for differential expression analysis
-Methylkit (Akalin et al. 2012) - R package for analysis of DNA methylation profiles 
-MethylExtract (Barturen et al. 2013) - Generates methylation maps and detects sequence variation
-MACAU (Lea, Tung, and Zhou 2015) - Differential methylation analysis for bisulfite sequencing data
+### Differential Gene Expression and Differential Methylation Analysis         
+RSEM (B. Li and Dewey 2011) - Alignment based transcript abundance estimation    
+Kallisto - (Bray et al. 2016) Alignment-free transcript abundance estimation    
+EdgeR (M. D. Robinson, McCarthy, and Smyth 2010) R package for differential expression analysis    
+DeSeq  (Anders and Huber 2012) R package for differential expression analysis    
+Methylkit (Akalin et al. 2012) - R package for analysis of DNA methylation profiles     
+MethylExtract (Barturen et al. 2013) - Generates methylation maps and detects sequence variation    
+MACAU (Lea, Tung, and Zhou 2015) - Differential methylation analysis for bisulfite sequencing data    
  
-Platforms for Genomic Analyses and Visualization     
-Galaxy (Afgan et al. 2016; Goecks et al. 2013) - Web-based platform for accessible, reproducible, and transparent analysis and visualization
-Integrated Genome Viewer (IGV) (J. T. Robinson et al. 2011; Thorvaldsdóttir, Robinson, and Mesirov 2013) - Visualization tool for interactive exploration of large, integrated genomic datasets
-CoGe (Lyons and Freeling 2008; Lyons et al. 2008) - Online system for making the retrieval and comparison of genomic information and sequence data
-Cyverse (Merchant et al. 2016) - Cyberinfrastructure for enabling data to discovery for the life sciences
-Bedtools (Quinlan and Hall 2010) - Suite of utilities for comparing genomic features
-Samtools (H. Li et al. 2009) - Suite of programs for interacting with high-throughput sequencing data
-Cytoscape (Shannon et al. 2003)  - Software platform for visualizing complex networks
-Revigo (Supek et al. 2011) - Web service that visually summarizes Gene Ontology terms
+### Platforms for Genomic Analyses and Visualization     
+Galaxy (Afgan et al. 2016; Goecks et al. 2013) - Web-based platform for accessible, reproducible, and transparent analysis and visualization    
+Integrated Genome Viewer (IGV) (J. T. Robinson et al. 2011; Thorvaldsdóttir, Robinson, and Mesirov 2013) - Visualization tool for interactive exploration of large, integrated genomic datasets    
+CoGe (Lyons and Freeling 2008; Lyons et al. 2008) - Online system for making the retrieval and comparison of genomic information and sequence data    
+Cyverse (Merchant et al. 2016) - Cyberinfrastructure for enabling data to discovery for the life sciences    
+Bedtools (Quinlan and Hall 2010) - Suite of utilities for comparing genomic features    
+Samtools (H. Li et al. 2009) - Suite of programs for interacting with high-throughput sequencing data    
+Cytoscape (Shannon et al. 2003)  - Software platform for visualizing complex networks    
+Revigo (Supek et al. 2011) - Web service that visually summarizes Gene Ontology terms    
 SQLShare - (Howe et al. 2011) - Database-as-a-service platform designed to facilitate data sharing and collaborative analysis
 
 

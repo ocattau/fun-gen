@@ -1,4 +1,3 @@
-# Just Text
 
 ## Navigating the computer from the command line
 In this module we will be following a Software Carpentry Lesson. It is suggested that you have this page open to follow along and a bash shell window. 

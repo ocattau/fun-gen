@@ -1,3 +1,8 @@
 .DS_Store
 .DS_Store
 blastdb/uniprot_sprot.fasta.gz
+blastdb/uniprot_sprot.fasta
+blastdb/uniprot_sprot_r2018_08.phr
+blastdb/uniprot_sprot_r2018_08.pin
+blastdb/uniprot_sprot_r2018_08.psq
+.DS_Store

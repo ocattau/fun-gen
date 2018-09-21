@@ -1,0 +1,186 @@
+---
+title: "Identifying Genes near DMRs"
+output: html_document
+---
+
+In this Rmarkdown file we will take a methylKit output file and end up with a list of genes associated with the DMRs based on genomic location. 
+
+
+## Getting Setup
+We will be using the Project feature in Rstudio where you will have access to data files in a manner that relative paths can be used. Files being provided to you (results of other processes) are in the `data` directory. You likely have the package dplyr installed on your machine. If for some reason you do not you woul need to run the following chunk after removing `#`.
+
+```{r, message = FALSE}
+#install.packages("dplyr")
+#install.packages("tidyr")
+```
+
+
+Once the library is instaled, you need to load the libary
+```{r, message = FALSE}
+library(dplyr)
+library(tidyr)
+```
+
+
+# Step  1. PREPARING A BED FILE
+
+Here we read in the methylKit output file containing DMRs between sperm and RBCs in _O. mykiss_
+
+```{r}
+DMRoutput <- read.csv ("../data/SpvRBC_DMR100bp_75percdiff")
+knitr::kable(
+  DMRoutput[1:5, ]
+)
+```
+
+
+
+Filtering DMRs to return only those that are _hypo-methylated_ (in sperm v. RBC) and saving this as `DMRoutput_hypo`
+
+```{r}
+DMRoutput_hypo <- filter(DMRoutput, meth.diff < 0)
+knitr::kable(
+  DMRoutput_hypo[1:5, ]
+)
+```
+
+
+Reformatting the output into a bed file (fields: chrom, chromStart,chromEnd,name*)
+
+The name field can contain any information that you want to keep with the region, we will retain the meth.diff column. 
+
+
+
+
+```{r}
+DMRoutput_hypo.bed <- select(DMRoutput_hypo,chr,start,end,meth.diff)  
+knitr::kable(
+  DMRoutput_hypo.bed[1:5, ]
+)
+```
+
+Write the table to the `analyses` directory.
+
+```{r}
+write.table (DMRoutput_hypo.bed,"../analyses/DMRs_hypo.bed",col.names = F, sep = '\t', row.names = F,quote = F)
+```
+
+
+# STEP 2. USING GENOMIC ARITHMATIC TO ANNOTATE REGIONS OF INTEREST
+
+**IMPORTANT** You will need to do is revise the two chunks below to include the locations of bedtools on your computer. If bedtools is in your system path simply `bedtools` would work.
+
+First we will sort the file created in prior Step.
+
+```{bash}
+/Applications/bioinfo/bedtools2/bin/bedtools \
+sort \
+-i ../analyses/DMRs_hypo.bed \
+> ../analyses/DMRs_hypo.sorted.bed
+```
+
+
+Then find closest genes with -D arguement reporting distance from genes
+
+```{bash}
+/Applications/bioinfo/bedtools2/bin/bedtools \
+closest \
+-a ../analyses/DMRs_hypo.sorted.bed \
+-b ../data/Omy_mRNA_subset.gff \
+-D b \
+> ../analyses/closetgene.txt
+
+head -3 ../analyses/closetgene.txt
+```
+
+
+
+
+# STEP 3. JOINING TABLES AND FILTERING BASED ON DISTANCE AND QUALIY OF ANNOTATION
+
+Reading in table from Step 2 into R. At the same time we will rename the columns to something more meaningful.
+
+```{r}
+DMRwgene <- read.table("../analyses/closetgene.txt", sep = '\t') %>% 
+  rename( DMR_chr= V1, DMR_start = V2, DMR_end = V3, DMR_meth.diff = V4,
+                     gene_seqname = V5, gene_source = V6, DMR_feature = V7, gene_start = V8,
+                     gene_end = V9, gene_score= V10, gene_strand = V11, DMR_frame = V12,
+                     gene_attribute = V13, dist_bp = V14)
+
+knitr::kable(
+  DMRwgene[1:2, ]
+)
+```
+
+
+
+
+Reading in blast output from comparing _O. mykiss_ to Swiss-Prot
+
+
+```{r}
+genes_annot <- read.table("../data/Omy_BLAST_UniProt.tab", header=T, sep="\t", stringsAsFactors=F, fill=T, quote="", na.strings="", comment.char="")
+
+
+knitr::kable(
+  genes_annot[1:2, ]
+)
+```
+
+
+
+Performing a left join to join the output of bedtools (DMRwgene) to the blast output (genes_annot)
+
+```{r}
+DMRwAnnot <- left_join(DMRwgene,genes_annot, by = c("gene_attribute" = "Sequence"))
+
+```
+
+
+
+
+```{r}
+head(DMRwAnnot)
+
+```
+
+Now we will filter the annotations to, 1) genes within 10kb of DMR, 2) and e-value of < 1e-10. And separated the blast Hit.Name so accession number and entry name are in new columns
+
+
+```{r}
+DMRwAnnot.filtered <- DMRwAnnot %>% 
+filter(dist_bp <= abs(10000) & E.Value <= 1e-10)  %>% 
+separate(Hit.Name, into = c("db", "acc", "spid"), sep = "\\|") 
+head(DMRwAnnot.filtered)  
+```     
+
+
+
+
+Saving files 
+
+```{r}
+write.table(DMRwAnnot.filtered,"../analyses/DMR_fullannotations.txt",sep = "\t",quote = F,row.names = F)
+
+
+write.table(DMRwAnnot.filtered$spid, "../analyses/DMR_spid.txt", sep = "\t", quote = F, row.names = F, col.names = F)
+```
+
+
+
+
+Getting Background for use with David
+
+
+
+```{r}
+Omykiss_all_background <- genes_annot %>%
+  select(Hit.Name) %>%
+  separate(Hit.Name, into = c("db", "acc", "spid"), sep = "\\|")  %>%
+  select(spid)
+
+head(Omykiss_all_background)
+
+
+write.table(Omykiss_all_background, "../analyses/Omykiss_background.txt", sep = "\t", quote = F, row.names = F, col.names = F)
+```

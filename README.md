@@ -1,7 +1,6 @@
 ### This repository is a supplement to the overview paper: [_Opportunities in functional genomics: a primer on lab and computational aspects_](http://www.bioone.org/doi/abs/10.2983/035.037.0406). Published in the Journal of Shellfish Research.
 
-[https://doi.org/10.2983/035.037.0406](https://doi.org/10.2983/035.037.0406)
-
+Roberts SB, Gavery MR. (**2018**) [Opportunities in Functional Genomics: A Primer on Lab and Computational Aspects](https://doi.org/10.2983/035.037.0406) Journal of Shellfish Research 37(4):747-754. doi:10.2983/035.037.0406  <span data-badge-popover="right" data-badge-type="2" data-doi="10.2983/035.037.0406" data-hide-no-mentions="true" class="altmetric-embed"></span> [pdf](http://gannet.fish.washington.edu/seashell/snaps/035.037.0406.pdf)
 
 
 The primary resources include:

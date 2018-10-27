@@ -11,6 +11,6 @@ The primary resources include:
 
 - [Jupyter Notebook](https://github.com/sr320/fun-gen/tree/master/Jupyter) demonstrating and local BLAST. Includes database creation.
 
-- [Rmd Docuemnts](https://github.com/sr320/fun-gen/tree/master/R/01-DMR-annotation/Rmd) that working through annotation of differentially methylated regions.
+- [Rmd Documents](https://github.com/sr320/fun-gen/tree/master/R/01-DMR-annotation/Rmd) that working through annotation of differentially methylated regions.
 
 Please use the [Issues](https://github.com/sr320/fun-gen/issues) feature in the repository to ask questions and suggest updates. 

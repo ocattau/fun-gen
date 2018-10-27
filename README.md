@@ -14,3 +14,11 @@ The primary resources include:
 - [Rmd Documents](https://github.com/sr320/fun-gen/tree/master/R/01-DMR-annotation/Rmd) that work through annotation of differentially methylated regions.
 
 Please use the [Issues](https://github.com/sr320/fun-gen/issues/new) feature in the repository to ask questions and suggest updates. 
+
+
+---
+
+#### Related Courses
+
+- [FISH546: Bioinformatics for Environmental Sciences](https://github.com/sr320/course-fish546-2018/wiki)
+- [FISH497: Data Science for SAFS (undergradaute R course)](https://sr320.github.io/course-fish497-2018/schedule/)

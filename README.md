@@ -1,4 +1,6 @@
-### This repository is a supplement to the overview paper: _Opportunities in functional genomics: a primer on lab and computational aspects_. Published in the Journal of Shellfish Research.
+### This repository is a supplement to the overview paper: [_Opportunities in functional genomics: a primer on lab and computational aspects_](http://www.bioone.org/doi/abs/10.2983/035.037.0406). Published in the Journal of Shellfish Research.
+
+[https://doi.org/10.2983/035.037.0406](https://doi.org/10.2983/035.037.0406)
 
 
 

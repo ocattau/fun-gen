@@ -13,4 +13,4 @@ The primary resources include:
 
 - [Rmd Documents](https://github.com/sr320/fun-gen/tree/master/R/01-DMR-annotation/Rmd) that work through annotation of differentially methylated regions.
 
-Please use the [Issues](https://github.com/sr320/fun-gen/issues) feature in the repository to ask questions and suggest updates. 
+Please use the [Issues](https://github.com/sr320/fun-gen/issues/new) feature in the repository to ask questions and suggest updates. 
